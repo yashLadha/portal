@@ -16,8 +16,8 @@ Setup for developers
 
 1. Make sure you have installed Python 3.4 (preferably latest minor release),
    [pip](https://pip.pypa.io/en/latest/) and [virtualenv](http://www.virtualenv.org/en/latest/).
-1. If working behind a proxy, make sure your environment variables are properly set up. If 
-   you still get an error due to proxy, use "-E" flag along with "sudo" to export all the 
+1. If working behind a proxy, make sure your environment variables are properly set up. If
+   you still get an error due to proxy, use "-E" flag along with "sudo" to export all the
    environment variables.
 1. Make sure you have python3-dev installed on your operating system. For Debian, you would additionally require libpq-dev.
    Install by using `sudo apt-get install libpq-dev python3-dev`
@@ -35,6 +35,10 @@ Setup for developers
  $ pip install -r requirements/dev.txt
  ```
 1. Create `systersdb` database, where `systersdb` might be any suitable name.
+1. Copy the example dev file:
+```bash
+$ cp systers_portal/settings/dev.example.py systers_portal/settings/dev.py
+```
 1. Fill in the database details in `systers_portal/settings/dev.py`.
 1. Run `export SECRET_KEY=foobarbaz` in your terminal, ideally the secret key
   should be 40 characters long, unique and unpredictable. Optionally to set the
